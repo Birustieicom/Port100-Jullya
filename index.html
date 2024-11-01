@@ -3,14 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifólios</title>
+    <title>Portfólios</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .portfolio-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+            background-color: #007BFF;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin: 5px 0;
+            transition: background-color 0.3s;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
   
-  <h1>Portifólios</h1>
+  <h1>Portfólios</h1>
 
-  <a href="pages/houssein.html">Houssein</a>
-  <a href="pages/jullya.html">Jullya</a>
+  <div class="portfolio-links">
+      <a href="pages/houssein.html">Houssein</a>
+      <a href="pages/jullya.html">Jullya</a>
+  </div>
 
 </body>
 </html>
