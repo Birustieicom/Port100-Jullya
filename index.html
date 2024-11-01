@@ -33,10 +33,23 @@
         a:hover {
             background-color: #0056b3;
         }
+
+        .quackquack {
+            width: 100px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            transition: left 0.5s ease;
+        }
+        
+        .quackquack:hover {
+            left: calc(100% - 100px);
+        }
     </style>
 </head>
 <body>
-  
+
   <h1>Portfólios</h1>
 
   <div class="portfolio-links">
@@ -45,7 +58,8 @@
   </div>
 
   <div class="quackquack">
-      <img src="img/quack.png">
+      <img src="img/quack.png" alt="Quack">
   </div>
+
 </body>
 </html>
