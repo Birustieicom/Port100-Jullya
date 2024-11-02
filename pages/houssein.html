@@ -12,6 +12,11 @@
             padding: 20px;
             background-color: #f3e2ff;
         }
+        .preencherespaco {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
         header {
             text-align: center;
             margin-bottom: 20px;
@@ -66,16 +71,21 @@
 <body>
 
 <header>
+<div class="voltar">
     <a href="../index.html"><button class="voltar">Voltar</button></a>
+</div>
+<div class="pessoa">
     <img src="../img/housseinfoto.png" alt="Foto de Houssein Aadil da Silva Barouk">
     <h1>Houssein Aadil da Silva Barouk</h1>
+</div>
+<div class="preencherespaco"></div>
 </header>
 
 <section class="informacoes">
     <h2>Informações Pessoais</h2>
     <ul>
         <li>Tenho 16 anos;</li>
-        <li>Funcionário da <a href="https://birustieicom.github.io/Quacklien-Entertainment/" target="_blank">Quacklien Entertainment</a>;</li>
+        <li>Funcionário da <a href="https://birustieicom.github.io/Quacklien-Entertainment/" class="QE" target="_blank">Quacklien Entertainment</a>;</li>
         <li>Estudo Ensino Médio integrado a um Ensino Técnico de Programação de Jogos Digitais na ETEC Peruíbe.</li>
     </ul>
 </section>
