@@ -41,20 +41,20 @@
         }
 
         .quackquack {
-            width: 100px;
+            width: 30px;
+            height: 30px;
             position: absolute;
             bottom: 0;
             left: 0;
             margin: 10px;
+            background-image: url('img/pato.png');
+            background-size: 800px 30px;
+            background-position: 0 0;
             transition: left 0.5s ease;
             cursor: pointer;
         }
 
-        .quackquack {
-            background-image: url('img/pato.png');
-            background-size: 240px 30px;
-            width: 30px;
-            height: 30px;
+        .animate {
             animation: sprite-animation 1s steps(8) infinite;
         }
 
@@ -80,6 +80,12 @@
         const windowWidth = window.innerWidth;
         const quackWidth = quackquack.offsetWidth;
         const currentLeft = parseInt(window.getComputedStyle(quackquack).left);
+        quackquack.classList.add('animate');
+
+        setTimeout(() => {
+            quackquack.classList.remove('animate');
+        }, 1000);
+
         if (currentLeft === 0) {
             quackquack.style.left = `${windowWidth - quackWidth}px`;
         } else {
