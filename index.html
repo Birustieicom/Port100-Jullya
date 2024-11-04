@@ -8,18 +8,24 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 0;
             background-color: #f4f4f4;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
         }
         h1 {
             text-align: center;
             color: #333;
+            margin-bottom: 20px;
         }
-        .portfolio-links {
+        .portfolios {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 20px;
+            text-align: center;
         }
         a {
             text-decoration: none;
@@ -37,29 +43,51 @@
         .quackquack {
             width: 100px;
             position: absolute;
-            top: 50%;
+            bottom: 0;
             left: 0;
-            transform: translateY(-50%);
+            margin: 10px;
             transition: left 0.5s ease;
+            cursor: pointer;
         }
-        
-        .quackquack:hover {
-            left: calc(100% - 100px);
+
+        .quackquack img {
+            width: 30px;
+            height: 30px;
+            object-fit: none;
+            object-position: 0 0;
+            animation: sprite-animation 1s steps(8) infinite;
+        }
+
+        @keyframes sprite-animation {
+            from { object-position: 0 0; }
+            to { object-position: -800px 0; }
         }
     </style>
 </head>
 <body>
 
-  <h1>Portfólios</h1>
-
-  <div class="portfolio-links">
+  <div class="portfolios">
+      <h1>Portfólios</h1>
       <a href="pages/houssein.html">Houssein</a>
       <a href="pages/jullya.html">Jullya</a>
   </div>
 
   <div class="quackquack">
-      <img src="img/pato.png" alt="Quack">
+      <img src="img/pato.png" alt="Pato">
   </div>
+
+  <script> document.querySelector('.quackquack').addEventListener('click', function() {
+        const quackquack = document.querySelector('.quackquack');
+        const windowWidth = window.innerWidth;
+        const quackWidth = quackquack.offsetWidth;
+        const currentLeft = parseInt(window.getComputedStyle(quackquack).left);
+        if (currentLeft === 0) {
+            quackquack.style.left = `${windowWidth - quackWidth}px`;
+        } else {
+            quackquack.style.left = '0';
+        }
+    });
+  </script>
 
 </body>
 </html>
