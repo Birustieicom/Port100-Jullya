@@ -50,17 +50,17 @@
             cursor: pointer;
         }
 
-        .quackquack img {
+        .quackquack {
+            background-image: url('img/pato.png');
+            background-size: 800px 30px;
             width: 30px;
             height: 30px;
-            object-fit: none;
-            object-position: 0 0;
             animation: sprite-animation 1s steps(8) infinite;
         }
 
         @keyframes sprite-animation {
-            from { object-position: 0 0; }
-            to { object-position: -800px 0; }
+            from { background-position: 0 0; }
+            to { background-position: -800px 0; }
         }
     </style>
 </head>
@@ -72,11 +72,10 @@
       <a href="pages/jullya.html">Jullya</a>
   </div>
 
-  <div class="quackquack">
-      <img src="img/pato.png" alt="Pato">
-  </div>
+  <div class="quackquack" title="Clique para mover o pato"></div>
 
-  <script> document.querySelector('.quackquack').addEventListener('click', function() {
+  <script>
+    document.querySelector('.quackquack').addEventListener('click', function() {
         const quackquack = document.querySelector('.quackquack');
         const windowWidth = window.innerWidth;
         const quackWidth = quackquack.offsetWidth;
